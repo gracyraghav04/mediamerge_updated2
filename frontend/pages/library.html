@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Library | MediaMerge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('mm_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-base="../" data-page="library">
+  <div id="site-nav"></div>
+  <main class="page"><div class="wrap">
+    <h1>My Library</h1><p class="sub">Pick up where you left off, revisit saved titles and review your history.</p>
+    <section class="section">
+      <div class="sec-head"><div><h2>Continue Watching</h2><p class="muted">Resume from where you stopped.</p></div></div>
+      <div class="grid" id="lib-continue"></div></section>
+    <section class="section">
+      <div class="sec-head"><div><h2>Saved Videos</h2><p class="muted">Titles you kept for later.</p></div><a class="view-all" href="browse.html">Browse more &rarr;</a></div>
+      <div class="grid" id="lib-saved"></div></section>
+    <section class="section">
+      <div class="sec-head"><div><h2>Watch History</h2><p class="muted">Everything you have streamed recently.</p></div><button class="view-all quiet" id="clear-history" type="button">Clear history</button></div>
+      <div class="grid" id="lib-history"></div></section>
+  </div></main>
+  <div id="site-footer"></div>
+  <script src="../js/script.js"></script>
+</body>
+</html>

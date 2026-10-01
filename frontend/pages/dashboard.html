@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Owner Dashboard | MediaMerge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('mm_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-base="../" data-dash="owner">
+<div class="dash">
+  <aside class="side" id="side"></aside>
+  <main class="dash-main">
+
+    <section data-view="overview">
+      <h1>Overview</h1><p class="dsub">Welcome back, <span data-name>Harborlight Studios</span> — here is how your catalogue is performing.</p>
+      <div class="stats">
+      <div class="stat"><small>Total Assets</small><strong>24</strong><em class="up">+3 this month</em></div>
+      <div class="stat"><small>Published</small><strong>18</strong><em class="up">+2 this month</em></div>
+      <div class="stat"><small>In Review</small><strong>3</strong><em class="warn">Avg. clearance 18h</em></div>
+      <div class="stat"><small>Total Views</small><strong>8.4M</strong><em class="up">+12.4% this month</em></div>
+    </div>
+      <div class="dhead"><div><h2>Recent Assets</h2><p>Your five most recently updated titles.</p></div><a class="view-all" href="#assets" data-go="assets">View All &rarr;</a></div>
+      <div class="panel flush" data-table="ownerRecent"></div>
+      <div class="dgrid even">
+        <div>
+          <div class="dhead"><div><h2>Quick Actions</h2></div></div>
+          <div class="qa">
+            <button class="qa-tile" type="button" data-action="review"><svg viewBox="0 0 24 24"><use href="#i-flag"/></svg>Review Queue</button>
+            <button class="qa-tile" type="button" data-action="upload"><svg viewBox="0 0 24 24"><use href="#i-upload"/></svg>Upload Content</button>
+            <button class="qa-tile" type="button" data-action="export"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg>Export Report</button>
+            <button class="qa-tile" type="button" data-action="rights"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg>Manage Rights</button>
+          </div>
+        </div>
+        <div>
+          <div class="dhead"><div><h2>Recent Activity</h2></div></div>
+          <div class="panel"><ul class="activity" data-activity="owner"></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-view="assets" hidden>
+      <h1>My Assets</h1><p class="dsub">Showing 8 of 24 titles in your catalogue.</p>
+      <div class="chips small" id="asset-filter"></div>
+      <div class="panel flush" data-table="ownerAssets"></div>
+    </section>
+
+    <section data-view="upload" hidden>
+      <h1>Upload Content</h1><p class="dsub">Submit a new video for review.</p>
+      <div class="panel narrow">
+        <form id="upload-form">
+          <div class="field"><label>Title</label><input type="text" placeholder="Asset title" required></div>
+          <div class="field"><label>Category</label><select><option>Movies</option><option>Series</option><option>Anime</option><option>Documentary</option></select></div>
+          <div class="field"><label>Collection</label><select><option>None</option><option>Harborlight Originals</option><option>Anime Spotlight</option><option>Documentary Archive</option><option>Festival Selections</option><option>Season Bundles</option></select></div>
+          <div class="field"><label>Video file</label><input type="file" accept="video/*"></div>
+          <p class="muted" id="upload-msg"></p><button class="btn-mm" type="submit">Submit for review</button>
+        </form>
+      </div>
+    </section>
+
+    <section data-view="collections" hidden>
+      <h1>Collections</h1><p class="dsub">Group titles into collections, bundles and seasons.</p>
+      <div class="stats">
+      <div class="stat"><small>Collections</small><strong>5</strong><em class="up">+1 this month</em></div>
+      <div class="stat"><small>Published</small><strong>3</strong><em class="mute">Visible to viewers</em></div>
+      <div class="stat"><small>Private</small><strong>1</strong><em class="mute">Only your team</em></div>
+      <div class="stat"><small>Draft</small><strong>1</strong><em class="mute">Not published</em></div>
+    </div>
+      <div class="panel flush" data-table="collections"></div>
+    </section>
+
+    <section data-view="metadata" hidden>
+      <h1>Metadata</h1><p class="dsub">Genre, language, runtime and descriptive data for every asset.</p>
+      <div class="stats">
+      <div class="stat"><small>Complete</small><strong>5</strong><em class="up">62% of catalogue</em></div>
+      <div class="stat"><small>Needs Info</small><strong>3</strong><em class="warn">Missing genre or tags</em></div>
+      <div class="stat"><small>Avg. Tags</small><strong>7</strong><em class="mute">Per asset</em></div>
+      <div class="stat"><small>Languages</small><strong>3</strong><em class="mute">English, Japanese, Spanish</em></div>
+    </div>
+      <div class="panel flush" data-table="metadata"></div>
+    </section>
+
+    <section data-view="licenses" hidden>
+      <h1>Rights &amp; Licenses</h1><p class="dsub">Territories and expiry dates for licensed assets.</p>
+      <div class="stats">
+      <div class="stat"><small>Active Licenses</small><strong>4</strong><em class="up">All territories cleared</em></div>
+      <div class="stat"><small>Expiring Soon</small><strong>1</strong><em class="warn">Midnight Terminal, Nov 2026</em></div>
+      <div class="stat"><small>Territories</small><strong>38</strong><em class="mute">Streaming regions</em></div>
+      <div class="stat"><small>Rights Holders</small><strong>190+</strong><em class="mute">Verified</em></div>
+    </div>
+      <div class="panel flush" data-table="licenses"></div>
+    </section>
+
+    <section data-view="review" hidden>
+      <h1>Content Review</h1><p class="dsub">Submissions waiting for clearance and recent decisions.</p>
+      <div class="stats">
+      <div class="stat"><small>In Review</small><strong>3</strong><em class="warn">Avg. clearance 18h</em></div>
+      <div class="stat"><small>Approved</small><strong>2</strong><em class="up">This month</em></div>
+      <div class="stat"><small>Changes Requested</small><strong>1</strong><em class="warn">Awaiting your update</em></div>
+      <div class="stat"><small>Oldest Waiting</small><strong>9h</strong><em class="mute">Salt &amp; Circuit</em></div>
+    </div>
+      <div class="panel flush" data-table="review"></div>
+    </section>
+
+    <section data-view="analytics" hidden>
+      <h1>Analytics</h1><p class="dsub">How viewers are engaging with your catalogue.</p>
+      <div class="stats">
+      <div class="stat"><small>Total Views</small><strong>8.4M</strong><em class="up">+12.4% this month</em></div>
+      <div class="stat"><small>Watch Time</small><strong>9.8M hrs</strong><em class="up">+8.1% this month</em></div>
+      <div class="stat"><small>Avg. Completion</small><strong>72%</strong><em class="up">+3 pts this month</em></div>
+      <div class="stat"><small>Top Territory</small><strong>US</strong><em class="mute">38% of views</em></div>
+    </div>
+      <div class="dhead"><div><h2>Top Performing Assets</h2><p>Your five most-watched titles.</p></div></div>
+      <div class="panel flush" data-table="analytics"></div>
+    </section>
+
+    <section data-view="profile" hidden>
+      <h1>Organization / Profile</h1><p class="dsub">Your organization details and team.</p>
+      <div class="panel narrow">
+        <form id="profile-form">
+          <div class="field"><label>Organization name</label><input type="text" value="Harborlight Studios" data-name></div>
+          <div class="field"><label>Email</label><input type="email" value="studio@harborlight.example"></div>
+          <button class="btn-mm" type="submit">Save changes</button>
+        </form>
+      </div>
+      <div class="dhead" style="margin-top:32px"><div><h2>Team</h2><p>People with access to this dashboard.</p></div></div>
+      <div class="panel flush" data-table="team"></div>
+    </section>
+
+  </main>
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | MediaMerge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('mm_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-base="../">
+  <main class="auth-page"><div class="auth-box">
+    <a class="brand" href="../index.html"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="3"/><path d="m10 8.5 5 3.5-5 3.5z"/></svg></span><span>Media<b>Merge</b></span></a>
+    <div class="card-mm">
+      <h1>Create Account</h1><p class="sub">Join MediaMerge today</p>
+      <form id="signup-form">
+        <div class="field"><label for="signup-name">Full Name</label><input type="text" id="signup-name" placeholder="Enter your full name" required></div>
+        <div class="field"><label for="signup-email">Email</label><input type="email" id="signup-email" placeholder="Enter your email" required></div>
+        <div class="field"><label for="signup-password">Password</label><input type="password" id="signup-password" placeholder="Create a password" required></div>
+        <div class="field"><label for="confirm-password">Confirm Password</label><input type="password" id="confirm-password" placeholder="Confirm your password" required></div>
+        <div class="field"><label>Account Type</label><div class="roles">
+          <label><input type="radio" name="role" value="viewer" checked> Viewer</label>
+          <label><input type="radio" name="role" value="content-owner"> Content Owner</label></div></div>
+        <p class="form-msg" id="form-msg"></p>
+        <button class="btn-mm full" type="submit">Create Account</button>
+      </form>
+      <div class="alt">Already have an account? <a href="login.html">Login</a></div>
+    </div>
+    <a class="back-home" href="../index.html">&larr; Back to MediaMerge</a>
+  </div></main>
+  <script src="../js/script.js"></script>
+</body>
+</html>

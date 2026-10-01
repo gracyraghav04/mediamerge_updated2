@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediaMerge — Manage. Protect. Stream.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('mm_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-base="" data-page="home">
+  <div id="site-nav"></div>
+  <section class="hero"><div class="wrap">
+    <span class="pill">AUTHORIZED STREAMING &amp; RIGHTS MANAGEMENT</span>
+    <h1>MANAGE. PROTECT. <span>STREAM.</span></h1>
+    <p>Discover and stream authorized content through a visual catalog built for movies, series, anime and documentaries.</p>
+    <div class="hero-btns"><a class="btn-mm" href="pages/viewer.html">Explore Your Content</a><a class="btn-ghost" href="pages/dashboard.html">Manage Content</a></div>
+    <div class="stats-row"><div><strong>12,800+</strong><span>assets under management</span></div><div><strong>190+</strong><span>verified rights holders</span></div><div><strong>38</strong><span>streaming territories</span></div></div>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="sec-head"><div><h2>Featured Videos</h2><p class="muted">Hand-picked premieres from verified rights holders.</p></div><a class="view-all" href="pages/browse.html">View All &rarr;</a></div>
+    <div class="grid" data-list="featured" data-limit="8"></div></div></section>
+  <section class="section"><div class="wrap">
+    <div class="sec-head"><div><h2>Trending Now</h2><p class="muted">What viewers are watching across the MediaMerge catalog.</p></div><a class="view-all" href="pages/browse.html?filter=trending">View All &rarr;</a></div>
+    <div class="grid" data-list="trending" data-limit="8"></div></div></section>
+  <section class="section"><div class="wrap">
+    <div class="sec-head"><div><h2>Hot Takes of the Week</h2><p class="muted">What the MediaMerge community is arguing about right now.</p></div><a class="view-all" href="pages/browse.html?filter=trending">See What&rsquo;s Trending &rarr;</a></div>
+    <div class="takes" data-hot></div></div></section>
+  <div id="site-footer"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

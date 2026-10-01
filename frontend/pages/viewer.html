@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewer Dashboard | MediaMerge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('mm_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-base="../" data-page="home">
+  <div id="site-nav"></div>
+  <main>
+    <!-- Hero: featured title + trailer carousel (filled by initViewerHome() in js/script.js) -->
+    <section class="vhero" id="vhero" aria-label="Featured trailers">
+      <div class="vh-bg" id="vh-bg"></div>
+      <video class="vh-video" id="vh-video" muted loop playsinline preload="none" src="../assets/videos/video.mp4"></video>
+      <div class="wrap vh-in">
+        <div class="vh-top">
+          <div class="vh-copy">
+            <p class="vh-meta" id="vh-meta"></p>
+            <h1 id="vh-title"></h1>
+            <p class="vh-desc" id="vh-desc"></p>
+            <div class="vh-btns">
+              <a class="btn-mm" id="vh-watch" href="#">Watch Now</a>
+              <button class="btn-ghost" id="vh-fav" type="button">+ Favorite</button>
+            </div>
+          </div>
+          <div class="vh-ctrl">
+            <button id="vh-play" type="button" aria-label="Play preview" title="Play preview"></button>
+            <button id="vh-mute" type="button" aria-label="Unmute preview" title="Unmute preview"></button>
+          </div>
+        </div>
+        <div class="trail-head"><h2>Movie Trailers</h2><span class="trail-count" id="vh-count" aria-live="polite"></span></div>
+        <div class="rail">
+          <button class="rail-btn prev" id="tr-prev" type="button" aria-label="Previous trailer"></button>
+          <div class="rail-track" id="tr-track"></div>
+          <button class="rail-btn next" id="tr-next" type="button" aria-label="Next trailer"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest releases poster rail -->
+    <section class="section rel"><div class="wrap">
+      <div class="sec-head"><h2 class="rel-title">Watch The Latest Releases On MediaMerge</h2>
+        <div class="rel-btns"><a class="btn-ghost" href="library.html">My Library</a><a class="btn-ghost" href="browse.html?filter=recent">View All</a></div></div>
+      <div class="rail">
+        <button class="rail-btn prev" id="po-prev" type="button" aria-label="Scroll releases left"></button>
+        <div class="rail-track" id="po-track"></div>
+        <button class="rail-btn next" id="po-next" type="button" aria-label="Scroll releases right"></button>
+      </div></div></section>
+
+    <section class="section"><div class="wrap">
+      <div class="sec-head"><h2>Featured Videos</h2><a class="view-all" href="browse.html?filter=featured">View All &rarr;</a></div>
+      <div class="grid" data-list="featured" data-limit="4"></div></div></section>
+    <section class="section"><div class="wrap">
+      <div class="sec-head"><h2>Trending Now</h2><a class="view-all" href="browse.html?filter=trending">View All &rarr;</a></div>
+      <div class="grid" data-list="trending" data-limit="4"></div></div></section>
+    <section class="section"><div class="wrap">
+      <div class="sec-head"><h2>Recommended For You</h2><a class="view-all" href="browse.html?filter=all">View All &rarr;</a></div>
+      <div class="grid" data-list="recommended" data-limit="4"></div></div></section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/script.js"></script>
+</body>
+</html>

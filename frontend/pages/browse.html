@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse | MediaMerge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('mm_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-base="../" data-page="browse">
+  <div id="site-nav"></div>
+  <main class="page"><div class="wrap">
+    <h1>Browse Videos</h1><p class="sub">Every title in the MediaMerge catalogue — all licensed for streaming.</p>
+    <div class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" id="search-input" placeholder="Search titles, genres…" aria-label="Search videos" autocomplete="off"></div>
+    <div class="chips" id="cat-chips"></div>
+    <div class="chips small" id="filter-chips"></div>
+    <p class="count" id="result-count"></p>
+    <div class="grid" id="browse-grid"></div>
+  </div></main>
+  <div id="site-footer"></div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
