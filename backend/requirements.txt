@@ -3,3 +3,4 @@ PyMySQL>=1.1
 cryptography>=42
 python-dotenv>=1.0
 Pillow>=10.0
+django-cors-headers>=4.3
