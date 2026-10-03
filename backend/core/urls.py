@@ -1,6 +1,6 @@
 from django.urls import path
 
-from . import views_auth, views_videos
+from . import views_auth, views_library, views_videos
 
 urlpatterns = [
     path("auth/signup/", views_auth.signup),
@@ -10,4 +10,10 @@ urlpatterns = [
 
     path("videos/", views_videos.video_list),
     path("videos/<slug:slug>/", views_videos.video_detail),
+
+    path("library/", views_library.library),
+    path("library/saved/<slug:slug>/", views_library.saved),
+    path("library/history/", views_library.history_clear),
+    path("library/history/<slug:slug>/", views_library.history_add),
+    path("library/progress/<slug:slug>/", views_library.progress),
 ]
