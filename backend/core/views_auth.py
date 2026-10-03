@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET, require_POST
 
-from .models import Organization, Profile
+from .models import Organization, Profile, TeamMember
 
 
 def read_json(request):
@@ -52,8 +52,10 @@ def signup(request):
     user = User.objects.create_user(username=email, email=email, password=password, first_name=name)
     org = None
     if role == "content-owner":
-        # demo: every content owner joins the first organization (Harborlight Studios)
-        org = Organization.objects.first() or Organization.objects.create(name=f"{name} Studio", email=email)
+        # every content owner gets their OWN empty organization
+        org = Organization.objects.create(name=f"{name}'s Studio", email=email)
+        TeamMember.objects.create(organization=org, name=name, role="Owner",
+                                  access="Full access", status="Active")
     Profile.objects.create(user=user, role=role, organization=org)
 
     login(request, user)
